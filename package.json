@@ -1,0 +1,23 @@
+{
+  "name": "webdb-ii-guided",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r esm index.js",
+    "dev": "nodemon -r esm index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "knex": "^0.20.8",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {
+    "esm": "^3.2.25",
+    "nodemon": "^2.0.2"
+  }
+}
