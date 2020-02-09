@@ -28,11 +28,12 @@ const findOneRole = async (req, res, next) => {
   }
 };
 
-const addNewRole = async (req, res) => {
+const addNewRole = async (req, res, next) => {
   try {
     const ids = await Roles.add(req.body);
     res.status(201).json({ ids });
   } catch (err) {
+    console.log('err = ', err);
     next(err);
   }
 };

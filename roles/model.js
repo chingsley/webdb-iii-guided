@@ -1,14 +1,7 @@
 import knex from 'knex';
-const knexConfig = {
-  client: 'sqlite3',
-  connection: {
-    filename: './data/rolex.db3'
-  },
-  useNullAsDefault: true, // required only for sqlite3
-  debug: true,
-}
+import knexConfig from '../knexfile';
 
-const db = knex(knexConfig);
+const db = knex(knexConfig.development);
 
 const find = () => db('roles');
 const findById = (id) => db('roles').where({ id }).first();
